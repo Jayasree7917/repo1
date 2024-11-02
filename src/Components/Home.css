@@ -90,9 +90,8 @@ body {
   background: rgba(19, 18, 18, 0.7);
   margin-top: 30px;
   padding: 20px;
-  width: 100%;
+  width: 100vw;
   height: auto;
-  max-width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -109,9 +108,9 @@ body {
 }
 .responsive-lottie-clock {
   width: 80%; /* Increase this value to make the animation wider */
-  max-width: 300px; /* Increase this to allow a larger maximum width */
+  max-width: 250px; /* Increase this to allow a larger maximum width */
   height: 100%;
-  max-height: 500px; /* Increase this value to allow for more height */
+  max-height: 350px; /* Increase this value to allow for more height */
   margin-right: 20px;
   margin-left: 20px;
 }
@@ -132,6 +131,13 @@ body {
   .countdown h1 {
     font-size: 1.8rem;
   }
+    /* Lottie Clock Animation Container */
+    .responsive-lottie-clock {
+      width: 90%;
+      max-width: 230px;
+      height: auto;
+      margin: 0 10px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -151,16 +157,10 @@ body {
     font-size: 1.6rem;
   }
 
-  .responsive-lottie {
-    width: 100%;
-    max-width: none;
-    height: auto;
-  }
-
   /* Lottie Clock Animation Container */
   .responsive-lottie-clock {
     width: 90%;
-    max-width: 250px;
+    max-width: 150px;
     height: auto;
     margin: 0 10px;
   }
