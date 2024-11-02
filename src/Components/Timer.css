@@ -1,27 +1,29 @@
+/* Timer Container */
 .timer-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
   margin-top: 1rem;
-  margin-left: 200px;
   padding: 1rem;
-
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
 }
 
+/* Individual Time Box */
 .time-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 9rem;
-  height: 9rem;
-  margin-right: 40px;
+  max-width: 10rem;
+  height: 8rem;
+  margin: 0.5rem;
 }
 
 .time-label {
   margin-top: 0.5rem;
   font-size: 1.2rem;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-transform: uppercase;
   font-weight: 600;
   color: rgb(243, 238, 238);
@@ -49,4 +51,31 @@
   fill: #3e98c7;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .timer-container {
+    margin-left: 0;
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center;
+  }
 
+  .time-box {
+    width: 8.5rem;
+    height: 8.5rem;
+  }
+
+  .time-label {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .time-box {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .time-label {
+    font-size: 1.2rem;
+  }
+}
