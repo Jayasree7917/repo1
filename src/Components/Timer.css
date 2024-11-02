@@ -1,0 +1,52 @@
+.timer-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-left: 200px;
+  padding: 1rem;
+
+}
+
+.time-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 9rem;
+  height: 9rem;
+  margin-right: 40px;
+}
+
+.time-label {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: rgb(243, 238, 238);
+  text-align: center;
+}
+
+.circular-progressbar {
+  width: 100%;
+  height: 100%;
+}
+
+.path-color {
+  stroke: rgb(34, 193, 195) !important;
+}
+
+.text-color {
+  fill: white !important;
+}
+
+.trail-color {
+  stroke: #0c0f1d !important;
+}
+
+.background-color {
+  fill: #3e98c7;
+}
+
+
