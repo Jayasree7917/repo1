@@ -150,6 +150,7 @@ body {
 
   .main {
     padding: 23px; /* Further reduce padding */
+<<<<<<< HEAD
   }
   .count{
     flex-direction: column;
@@ -166,3 +167,21 @@ body {
     margin: 0 10px;
   }
 }
+=======
+  }
+  .count{
+    flex-direction: column;
+  }
+  .countdown h1 {
+    font-size: 1.1rem;
+  }
+
+  /* Lottie Clock Animation Container */
+  .responsive-lottie-clock {
+    width: 90%;
+    max-width: 120px;
+    height: auto;
+    margin: 0 10px;
+  }
+}
+>>>>>>> b9b5ad1ae70e77bcd6bead673ed75bd4725fcda8
