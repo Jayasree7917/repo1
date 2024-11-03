@@ -1,3 +1,4 @@
+/* General Body Styling */
 body {
   margin: 0;
   height: 100vh;
@@ -5,51 +6,52 @@ body {
   background-size: cover;
 }
 
+/* Main Container Styling */
 .home-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background:url('https://github.com/Suke2004/CCA-RnD-website/blob/main/IMG-20241027-WA0163.jpg?raw=true') no-repeat center center fixed;
+  background: url('https://github.com/Suke2004/CCA-RnD-website/blob/main/IMG-20241027-WA0163.jpg?raw=true') no-repeat center center fixed;
   background-size: cover;
 }
 
+/* Keyframes Animation */
 @keyframes gradientAnimation {
-  0% {
+  0%, 100% {
     background-position: 0% 50%;
   }
   50% {
     background-position: 100% 50%;
   }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
+/* Main Content Styling */
 .main {
   display: flex;
+  flex-direction: column; /* Column layout for better responsiveness */
   align-items: center;
-  justify-content: center;
-  gap: 0px; /* Space between Lottie and text */
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(10px);
+  gap: 0;
+  backdrop-filter: blur(10px);
   border-radius: 30px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 10px 15px rgba(0, 0, 0, 0.3);
-  padding: 40px;
-  margin-top: 30px;
-  width: 50vw;
-  margin-bottom: 50px;
+  padding: 60px;
+  margin: 30px 0;
+  width: 90%;
+  max-width: 700px;
   color: #ffffff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hover Effect */
 .main:hover {
   transform: translateY(-5px);
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6), 0 15px 20px rgba(0, 0, 0, 0.5);
   animation: pulse 1.5s infinite;
 }
 
+/* Pulse Animation */
 @keyframes pulse {
   0%, 100% {
     transform: scale(1);
@@ -59,90 +61,108 @@ body {
   }
 }
 
+/* Heading Styling */
 .heading {
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 .heading h1 {
-  font-size: 4rem;
+  font-size: 3rem; /* Font size adjusted for better scaling */
   font-weight: 700;
   color: #ffffff;
-  text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.8); 
-  margin-inline-start: 2px;
-  margin-right: 100px;
+  text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.8);
+  margin: 0;
 }
 
 .heading p {
-  font-size: 1.5rem;
+  font-size: 1.3rem; /* Font size maintained for readability */
   font-family: 'Arial', sans-serif;
   color: #afbecb;
   margin-top: 20px;
-  margin-inline-start: -50px;
-  width: 115%; 
+  width: 100%;
 }
 
+/* Countdown Section Styling */
 .count {
   backdrop-filter: blur(5px);
-  background: rgba(19, 18, 18, 0.7); /* Dark semi-transparent */  
-  margin-top: 45px;
-  height: 40vh;
+  background: rgba(19, 18, 18, 0.7);
+  margin-top: 30px;
+  padding: 20px;
   width: 100vw;
+  height:40vh auto;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
 .countdown h1 {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #ffffff;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
   text-align: center;
 }
-
+.responsive-lottie-clock {
+  width: 80%; /* Increase this value to make the animation wider */
+  max-width: 250px; /* Increase this to allow a larger maximum width */
+  height: 100%;
+  max-height: 350px; /* Increase this value to allow for more height */
+  margin-right: 7rem;
+  margin-left: 1.5rem;
+}
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-  .main {
-    flex-direction: column;
-    width: 80vw;
-    padding: 30px;
-  }
-
   .heading h1 {
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* Responsive font size */
+  }
+  
+  .heading p {
+    font-size: 1.1rem; /* Adjust paragraph size for smaller screens */
   }
 
-  .heading p {
-    font-size: 1rem;
+  .main {
+    padding: 40px; /* Reduce padding for smaller screens */
   }
+
+  .countdown h1 {
+    font-size: 1.35rem;
+  }
+    /* Lottie Clock Animation Container */
+    .responsive-lottie-clock {
+      width: 90%;
+      max-width: 210px;
+      height: auto;
+      margin: 0 10px;
+    }
 }
 
 @media (max-width: 480px) {
-  .main {
-    flex-direction: column;
-    width: 90vw;
-    padding: 20px;
-  }
-
   .heading h1 {
-    font-size: 2rem;
+    font-size: 2.3rem; /* Further responsive font size */
   }
 
   .heading p {
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Further adjust paragraph size */
   }
 
-  .responsive-lottie {
-    width: 100%;
-    max-width: none;
-    height: auto;
+  .main {
+    padding: 23px; /* Further reduce padding */
   }
-}
-.responsive-lottie-clock {
-  width: 80%; /* Increase this value to make the animation wider */
-  max-width: 300px; /* Increase this to allow a larger maximum width */
-  height: 100%;
-  max-height: 500px; /* Increase this value to allow for more height */
-  margin-right: 20px;
-  margin-left: 20px;
+  .count{
+    flex-direction: column;
+  }
+  .countdown h1 {
+    font-size: 1.1rem;
+  }
+
+  /* Lottie Clock Animation Container */
+  .responsive-lottie-clock {
+    width: 90%;
+    max-width: 120px;
+    height: auto;
+    margin: 0 10px;
+  }
 }

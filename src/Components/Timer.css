@@ -1,27 +1,29 @@
+/* Timer Container */
 .timer-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
   margin-top: 1rem;
-  margin-left: 200px;
   padding: 1rem;
-
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
 }
 
+/* Individual Time Box */
 .time-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 9rem;
-  height: 9rem;
-  margin-right: 40px;
+  max-width: 10rem;
+  height: 8rem;
+  margin: 0.5rem;
 }
 
 .time-label {
   margin-top: 0.5rem;
   font-size: 1.2rem;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-transform: uppercase;
   font-weight: 600;
   color: rgb(243, 238, 238);
@@ -49,4 +51,98 @@
   fill: #3e98c7;
 }
 
+/* Responsive Design */
+@media (max-width: 1024px) {
+  /* Tablet view */
+  .time-box {
+    width: 9rem;
+    height: 7.5rem;
+  }
 
+  .time-label {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Small tablet view */
+  .timer-container {
+    margin-left: 0;
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center;
+  }
+
+  .time-box {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+
+  .time-label {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Large mobile view */
+  .time-box {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+
+  .time-label {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  /* Small mobile view */
+  .time-box {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+
+  .time-label {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 320px) {
+  /* Extra small mobile view */
+  .time-box {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  .time-label {
+    font-size: 0.75rem;
+  }
+}
+
+/* Larger Screen (Desktop) Adjustments */
+@media (min-width: 1280px) {
+  .timer-container {
+    gap: 2rem; /* Add more space between time-boxes on larger screens */
+    padding: 1.5rem;
+  }
+
+  .time-box {
+    width: 11rem;
+    height: 9rem;
+  }
+
+  .time-label {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  /* Larger desktop screens */
+  .time-box {
+    width: 12rem;
+    height: 10rem;
+  }
+
+  .time-label {
+    font-size: 1.5rem;
+  }
+}

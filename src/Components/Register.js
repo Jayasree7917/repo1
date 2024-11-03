@@ -1,3 +1,3 @@
-export const About = () => {
+export const Register = () => {
     return <div>namaste</div>;
 };
